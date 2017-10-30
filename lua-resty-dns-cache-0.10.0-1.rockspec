@@ -1,8 +1,7 @@
 package = "lua-resty-dns-cache"
 version = "0.10.0-1"
 source = {
-  url = "git://github.com/simplesite/lua-resty-dns-cache.git",
-  tag = "v0.10.0",
+  url = "git://github.com/simplesite/lua-resty-dns-cache.git"
 
 }
 description = {
