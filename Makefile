@@ -1,8 +1,5 @@
 OPENRESTY_PREFIX=/usr/local/openresty
 
-PREFIX ?=          /usr/local
-LUA_INCLUDE_DIR ?= $(PREFIX)/include
-LUA_LIB_DIR ?=     $(PREFIX)/lib/lua/$(LUA_VERSION)
 INSTALL ?= install
 TEST_FILE ?= t
 
@@ -12,7 +9,8 @@ all: ;
 
 
 install: all
-	$(INSTALL) -d $(DESTDIR)/$(LUA_LIB_DIR)/resty/dns
+	$(INSTALL) -d $(INST_LUADIR)/resty/dns
+#	$(INSTALL) -m 644 lib/resty/dns/cache.lua $(INST_LUADIR)/resty/dns/cache.lua 
 
 leak: all
 	TEST_NGINX_CHECK_LEAK=1	TEST_NGINX_NO_SHUFFLE=1 PATH=$(OPENRESTY_PREFIX)/nginx/sbin:$$PATH prove -I../test-nginx/lib -r $(TEST_FILE)
