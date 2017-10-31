@@ -2,18 +2,12 @@ package = "lua-resty-dns-cache"
 version = "0.10.0-1"
 source = {
   url = "git://github.com/simplesite/lua-resty-dns-cache.git"
-
 }
 description = {
-  summary = "A wrapper for lua-resty-dns to cache responses based on record TTLs.",
-  detailed = "Uses lua-resty-lrucache and ngx.shared.DICT to provide a 2 level cache. Can repopulate cache in the background while returning stale answers.",
-  homepage = "https://github.com/simplesite/lua-resty-dns-cache",
-  license = "MIT",
-
+  summary = "DNS caching wrapper OpenResty",
 }
 dependencies = {
   "lua-resty-http",
-
 }
 build = {
   type = "make",
@@ -24,7 +18,6 @@ build = {
     LUA_BINDIR="$(LUA_BINDIR)",
     LUA_INCDIR="$(LUA_INCDIR)",
     LUA="$(LUA)",
-
   },
   install_variables = {
     INST_PREFIX="$(PREFIX)",
@@ -32,8 +25,6 @@ build = {
     INST_LIBDIR="$(LIBDIR)",
     INST_LUADIR="$(LUADIR)",
     INST_CONFDIR="$(CONFDIR)",
-
   },
-
 }
 
