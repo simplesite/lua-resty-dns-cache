@@ -4,7 +4,7 @@ source = {
   url = "git://github.com/simplesite/lua-resty-dns-cache.git"
 }
 description = {
-  summary = "DNS caching wrapper OpenResty",
+  summary = "Caching wrapper for DNS in OpenResty",
 }
 dependencies = {
   "lua-resty-http",
