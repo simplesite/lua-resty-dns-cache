@@ -1,4 +1,4 @@
-INST_LUADIR=/usr/share/lualib/resty/dns/cache.lua
+INST_LUADIR=/usr/share/lualib/resty/dns/
 
 .PHONY:
 	all 
